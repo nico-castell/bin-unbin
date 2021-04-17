@@ -54,3 +54,6 @@ You can also check the latest [release](https://github.com/nico-castell/bin-unbi
 ## License
 
 This repository is available under the [MIT License](LICENSE).
+
+> Live long, and prosper  
+> Spock

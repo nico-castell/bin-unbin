@@ -17,7 +17,12 @@ int main(int argc, char* argv[])
 	string input = argv[1];
 	int il = input.length();
 
-	// Print the table.
+	/**
+	 * Print the binaries obtained from each char.
+	 *   1. Read a character from the string
+	 *   2. Cast that character into an 8 bit bitset
+	 *   3. Print the bitset
+	 */
 	for (int i = 0; i < il; i++)
 		std::cout << (std::bitset<8>)input[i] << ' ';
 	std::cout << '\n';
