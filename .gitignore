@@ -10,6 +10,10 @@ $RECYCLE.BIN/
 *test*
 *tmp*
 
+# Exclude compressed binaries
+binaries*.tar*
+binaries*.zip
+
 # Exclude build folder/s
 [Bb]uild/*
 [Oo]ut/*
