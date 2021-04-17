@@ -20,6 +20,7 @@ int main(int argc, char* argv[])
 	 */
 	for (int i = 1; i < argc; i++)
 		std::cout << (char)strtol(argv[i], NULL, 2);
+	std::cout << '\n';
 
 	return 0;
 }
