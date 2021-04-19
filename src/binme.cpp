@@ -8,8 +8,8 @@ int main(int argc, char* argv[])
 	if (argc != 2)
 	{
 		string name = argv[0];
-		std::cerr << "\e[31mERROR: You must input one argument\n"
-					 << "\e[33mUsage:\e[00m " + name + " 'Phrase'\n";
+		std::cerr << "\033[31mERROR: You must input one argument\n"
+					 << "\033[33mUsage:\033[00m " + name + " 'Phrase'\n";
 		return 1;
 	}
 
