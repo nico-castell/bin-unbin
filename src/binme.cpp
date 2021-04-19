@@ -7,9 +7,8 @@ int main(int argc, char* argv[])
 	// Validate arguments.
 	if (argc != 2)
 	{
-		string name = argv[0];
 		std::cerr << "\033[31mERROR: You must input one argument\n"
-					 << "\033[33mUsage:\033[00m " + name + " 'Phrase'\n";
+					 << "\033[33mUsage:\033[00m " + (string)argv[0] + " 'Phrase'\n";
 		return 1;
 	}
 
