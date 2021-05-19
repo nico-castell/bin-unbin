@@ -16,6 +16,8 @@ foreach(i "${PROJ_1}" "${PROJ_2}")
 	install(TARGETS "${i}"
 			  RUNTIME
 			  DESTINATION bin)
+	install(FILES "man/${i}.1"
+	        DESTINATION share/man/man1)
 endforeach()
 
 # CPack
