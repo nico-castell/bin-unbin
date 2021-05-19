@@ -30,24 +30,20 @@ $ ./unbinme 01010011 01101111 01101101 01100101 00100000 01110000 01101000 01110
 Some phrase
 ```
 
-## How to build the project
+## How to build and install the project
 
 **Prerequisites:** CMake, and a compiler for C/C++, ideally also an IDE.
 
 This project uses *CMake* to configure the build environment, to prepare the build environment do the following:
 
+On unix like OSs (🐧, 🍎), you can do as follows:
 ```bash
 $ cd /path/to/cloned_repo
-$ cmake -S . -B build
+$ cmake -S . -B build -DCMAKE_INSTALL_PREFIX=/usr
+$ sudo cmake --build build --target install --config Release
 ```
 
-If you're on a UNIX-like OS (:penguin:, :apple:) you can do as follows:
-```bash
-$ cd build
-$ make
-```
-
-If you're on :checkered_flag: Windows you have to follow the steps for your default build tool.
+If you're on Windows 🏁 you might have to go about it a little differently.
 
 You can also check the latest [release](https://github.com/nico-castell/bin-unbin/releases) for binaries in compressed archives, if you don't want to (or can't) compile the programs yourself.
 
