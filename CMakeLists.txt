@@ -14,10 +14,12 @@ add_executable("${PROJ_2}" "src/unbinme.cpp")
 # Install
 foreach(i "${PROJ_1}" "${PROJ_2}")
 	install(TARGETS "${i}"
-			  RUNTIME
-			  DESTINATION bin)
-	install(FILES "man/${i}.1"
-	        DESTINATION share/man/man1)
+	        RUNTIME
+	        DESTINATION bin)
+	if("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
+		install(FILES "man/${i}.1"
+				  DESTINATION share/man/man1)
+	endif()
 endforeach()
 
 # CPack
