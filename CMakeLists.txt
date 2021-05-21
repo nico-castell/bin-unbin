@@ -5,11 +5,17 @@ set(PROJ_1 binme)
 set(VERS 0.1.0)
 project("${PROJ_1}" VERSION "${VERS}")
 add_executable("${PROJ_1}" "src/binme.cpp")
+set_property(TARGET "${PROJ_1}" PROPERTY
+             CXX_STANDARD 17
+				 CXX_STANDARD_REQUIRED 11)
 
 # unbinme - Project to convert binary to text
 set(PROJ_2 unbinme)
 project("${PROJ_2}" VERSION "${VERS}")
 add_executable("${PROJ_2}" "src/unbinme.cpp")
+set_property(TARGET "${PROJ_2}" PROPERTY
+             CXX_STANDARD 17
+				 CXX_STANDARD_REQUIRED 11)
 
 # Install
 foreach(i "${PROJ_1}" "${PROJ_2}")
