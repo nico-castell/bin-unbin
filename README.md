@@ -36,14 +36,19 @@ Some phrase
 
 This project uses *CMake* to configure the build environment, to prepare the build environment do the following:
 
-On unix like OSs (🐧, 🍎), you can do as follows:
-```bash
+To install the binaries on a unix like OS (🐧, 🍎), you can do as follows:
+```shell
 $ cd /path/to/cloned_repo
-$ cmake -S . -B build -DCMAKE_INSTALL_PREFIX=/usr
-$ sudo cmake --build build --target install --config Release
+$ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
+$ sudo cmake --build build --target install
 ```
 
-If you're on Windows 🏁 you might have to go about it a little differently.
+If you're on Windows 🏁 you should execute the following commands **as administrator**:
+```powershell
+> cd /path/to/cloned_repo
+> cmake -S . -B build
+> cmake --build build --target install
+```
 
 You can also check the latest [release](https://github.com/nico-castell/bin-unbin/releases) for binaries in compressed archives, if you don't want to (or can't) compile the programs yourself.
 
