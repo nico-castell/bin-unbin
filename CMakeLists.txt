@@ -28,12 +28,6 @@ foreach(i "${PROJ_1}" "${PROJ_2}")
 	endif()
 endforeach()
 
-# CPack
-set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
-set(CPACK_PROJECT_VERSION "${PROJECT_VERSION}")
-set(DESTINATION "${CMAKE_INSTALL_PREFIX}")
-
-# Linux package manager specification
+# CPack file
 include(CMakeLists.txt.in OPTIONAL)
-
 include(CPack)
