@@ -35,11 +35,6 @@ set(CPACK_PACKAGE_VERSION "${VERS}")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Installs two commands, binme and unbinme, that turn ASCII text to binary and viceversa.")
 set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/nico-castell/bin-unbin")
 
-# License file (Must be encoded using ISO-8859-15 and is used by NSIS on Windows)
-if(EXISTS "${CMAKE_SOURCE_DIR}/LICENSE1")
-	set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/LICENSE1")
-endif()
-
 # RPM (RHEL-based distros) - Use -DCMAKE_BINARY_RPM=ON flag to enable it
 set(CPACK_RPM_FILE_NAME "RPM-DEFAULT")
 set(CPACK_RPM_PACKAGE_LICENSE "MIT License")
@@ -48,9 +43,11 @@ set(CPACK_RPM_PACKAGE_LICENSE "MIT License")
 set(CPACK_DEBIAN_FILE_NAME "DEB-DEFAULT")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "$ENV{USER}")
 
-# Windows
+# Windows - Use WiX tools with the flag -DCPACK_GENERATOR=WIX
 if("${CMAKE_SYSTEM_NAME}" STREQUAL "Windows")
 	set(CPACK_PACKAGE_ICON "${CMAKE_SOURCE_DIR}/assets\\\\logo.png")
+	set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/LICENSE1.txt")
+	set(CPACK_WIX_PRODUCT_ICON "${CMAKE_SOURCE_DIR}/assets/logo.png")
 endif()
 
 # Use CPack

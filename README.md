@@ -72,14 +72,13 @@ This project uses [*CPack*](https://cmake.org/cmake/help/latest/module/CPack.htm
   $ sudo dnf install ./build/*.rpm
   ```
 
-- If you're on Windows and you want a GUI installer, you'll also need [NSIS](https://nsis.sourceforge.io/Download) installed, and then you execute these PowerShell commands **as administrator**:
+- If you're on Windows and you want a GUI installer, you'll also need [WiX Tools](https://wixtoolset.org/releases/) installed, and then you execute these PowerShell commands:
   ```
   > cd \path\to\cloned_repo
-  > cmake -S . -B build
+  > cmake -S . -B build -DCPACK_GENERATOR=WIX
   > cmake --build build --target PACKAGE --config Release
-  > .\build\bin-unbin-1.0.0-win64.exe
+  > .\build\*.msi
   ```
-  NOTE: The final executable may have a different name, but it always ends in **.exe**.
 
 ## License
 
