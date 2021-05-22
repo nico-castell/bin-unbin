@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16.0)
 
 # binme   - Project to convert text to binary
 set(PROJ_1 binme)
-set(VERS 1.0.0)
+set(VERS 1.0.1)
 project("${PROJ_1}" VERSION "${VERS}")
 add_executable("${PROJ_1}" "src/binme.cpp")
 set_property(TARGET "${PROJ_1}" PROPERTY
@@ -46,7 +46,7 @@ set(CPACK_DEBIAN_PACKAGE_MAINTAINER "$ENV{USER}")
 # Windows - Use WiX tools with the flag -DCPACK_GENERATOR=WIX
 if("${CMAKE_SYSTEM_NAME}" STREQUAL "Windows")
 	set(CPACK_PACKAGE_ICON "${CMAKE_SOURCE_DIR}/assets\\\\logo.png")
-	set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/LICENSE1.txt")
+	set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/assets/LICENSE.txt")
 	set(CPACK_WIX_PRODUCT_ICON "${CMAKE_SOURCE_DIR}/assets/logo.png")
 endif()
 

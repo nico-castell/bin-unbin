@@ -50,7 +50,7 @@ This project uses *CMake* to configure the build environment, to install the bin
   > cmake --build build --target INSTALL --config Release
   ```
 
-You can also check the latest [release](https://github.com/nico-castell/bin-unbin/releases) for binaries in compressed archives, if you don't want to (or can't) compile the programs yourself.
+You can also check the latest [release](https://github.com/nico-castell/bin-unbin/releases/latest) for binaries in compressed archives, if you don't want to (or can't) compile the programs yourself.
 
 ## How to package the project
 

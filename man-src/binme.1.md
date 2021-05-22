@@ -1,4 +1,4 @@
-% binme(1) 1.0.0
+% binme(1) 1.0.1
 % Nicolás Castellán
 % May 2021
 
