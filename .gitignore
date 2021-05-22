@@ -14,6 +14,9 @@ $RECYCLE.BIN/
 binaries*.tar*
 binaries*.zip
 
+# CMakeLists.txt.in for Linux package managers
+CMakeLists.txt.in
+
 # Exclude build folder/s
 [Bb]uild/*
 [Oo]ut/*
