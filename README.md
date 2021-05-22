@@ -56,7 +56,7 @@ You can also check the latest [release](https://github.com/nico-castell/bin-unbi
 
 This project uses [*CPack*](https://cmake.org/cmake/help/latest/module/CPack.html) to create packages and installers. This might be useful if you're on Linux and you want to install the project using your package manager.
 
-- If you're on a debian-based Linux ditro, execute these commands:
+- If you're on a debian-based Linux distro, execute these commands:
   ```
   $ cd /path/to/cloned_repo
   $ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DCPACK_BINARY_DEB=ON
