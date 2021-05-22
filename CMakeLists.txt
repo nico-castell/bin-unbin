@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16.0)
 
 # binme   - Project to convert text to binary
 set(PROJ_1 binme)
-set(VERS 1.0.1)
+set(VERS 1.0.2)
 project("${PROJ_1}" VERSION "${VERS}")
 add_executable("${PROJ_1}" "src/binme.cpp")
 set_property(TARGET "${PROJ_1}" PROPERTY
@@ -34,10 +34,11 @@ set(CPACK_PACKAGE_NAME "bin-unbin")
 set(CPACK_PACKAGE_VERSION "${VERS}")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Installs two commands, binme and unbinme, that turn ASCII text to binary and viceversa.")
 set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/nico-castell/bin-unbin")
+set(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_SOURCE_DIR}/assets/Package-Description.txt")
 
 # RPM (RHEL-based distros) - Use -DCMAKE_BINARY_RPM=ON flag to enable it
 set(CPACK_RPM_FILE_NAME "RPM-DEFAULT")
-set(CPACK_RPM_PACKAGE_LICENSE "MIT License")
+set(CPACK_RPM_PACKAGE_LICENSE "MIT")
 
 # DEB (Debian-based distros) - Use -DCMAKE_BINARY_DEB=ON flag to enable it
 set(CPACK_DEBIAN_FILE_NAME "DEB-DEFAULT")

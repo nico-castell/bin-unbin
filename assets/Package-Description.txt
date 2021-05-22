@@ -1,0 +1,1 @@
+bin-unbin provides two commands, binme and unbinme, that use the bitsets of each character to convert between binary and ASCII text.
