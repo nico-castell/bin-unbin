@@ -14,9 +14,6 @@ $RECYCLE.BIN/
 binaries*.tar*
 binaries*.zip
 
-# CPack
-# CMakeLists.txt.in for CPak (platform specific file)
-CMakeLists.txt.in
 # Special file with ISO-8859-15 enconding for Windows NSIS packager
 LICENSE1
 

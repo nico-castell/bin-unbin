@@ -52,6 +52,35 @@ This project uses *CMake* to configure the build environment, to install the bin
 
 You can also check the latest [release](https://github.com/nico-castell/bin-unbin/releases) for binaries in compressed archives, if you don't want to (or can't) compile the programs yourself.
 
+## How to package the project
+
+This project uses [*CPack*](https://cmake.org/cmake/help/latest/module/CPack.html) to create packages and installers. This might be useful if you're on Linux and you want to install the project using your package manager.
+
+- If you're on a debian-based Linux ditro, execute these commands:
+  ```
+  $ cd /path/to/cloned_repo
+  $ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DCPACK_BINARY_DEB=ON
+  $ cmake --build build --target package
+  $ sudo apt install ./build/*.deb
+  ```
+
+- If you're on a RHEL-based Linux distro, execute these commands:
+  ```
+  $ cd /path/to/cloned_repo
+  $ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DCPACK_BINARY_RPM=ON
+  $ cmake --build build --target package
+  $ sudo dnf install ./build/*.rpm
+  ```
+
+- If you're on Windows and you want a GUI installer, you'll also need [NSIS](https://nsis.sourceforge.io/Download) installed, and then you execute these PowerShell commands **as administrator**:
+  ```
+  > cd \path\to\cloned_repo
+  > cmake -S . -B build
+  > cmake --build build --target PACKAGE --config Release
+  > .\build\bin-unbin-1.0.0-win64.exe
+  ```
+  NOTE: The final executable may have a different name, but it always ends in **.exe**.
+
 ## License
 
 This repository is available under the [MIT License](LICENSE).

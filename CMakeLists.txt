@@ -28,6 +28,27 @@ foreach(i "${PROJ_1}" "${PROJ_2}")
 	endif()
 endforeach()
 
-# CPack file
-include(CMakeLists.txt.in OPTIONAL)
+# Prepare CPack
+# Common variables to all packagers
+set(CPACK_PACKAGE_NAME "bin-unbin")
+set(CPACK_PACKAGE_VERSION "${VERS}")
+set(CPACK_PACKAGE_ICON "${CMAKE_SOURCE_DIR}/assets/logo.png")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Installs two commands, binme and unbinme, that turn ASCII text to binary and viceversa.")
+set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/nico-castell/bin-unbin")
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/LICENSE")
+
+# License file (Must be encoded using ISO-8859-15 and is used by NSIS on Windows)
+if(EXISTS "${CMAKE_SOURCE_DIR}/LICENSE1")
+	set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/LICENSE1")
+endif()
+
+# RPM (RHEL-based distros) - Use -DCMAKE_BINARY_RPM=ON flag to enable it
+set(CPACK_RPM_FILE_NAME "RPM-DEFAULT")
+set(CPACK_RPM_PACKAGE_LICENSE "MIT License")
+
+# DEB (Debian-based distros) - Use -DCMAKE_BINARY_DEB=ON flag to enable it
+set(CPACK_DEBIAN_FILE_NAME "DEB-DEFAULT")
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "$ENV{USER}")
+
+# Use CPack
 include(CPack)
