@@ -34,21 +34,21 @@ Some phrase
 
 **Prerequisites:** CMake, and a compiler for C/C++, ideally also an IDE.
 
-This project uses *CMake* to configure the build environment, to prepare the build environment do the following:
+This project uses *CMake* to configure the build environment, to install the binaries you should do the following:
 
-To install the binaries on a unix like OS (🐧, 🍎), you can do as follows:
-```shell
-$ cd /path/to/cloned_repo
-$ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
-$ sudo cmake --build build --target install
-```
+- If you're on Linux 🐧 you should execute the following commands:
+  ```
+  $ cd /path/to/cloned_repo
+  $ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
+  $ sudo cmake --build build --target install
+  ```
 
-If you're on Windows 🏁 you should execute the following commands **as administrator**:
-```powershell
-> cd /path/to/cloned_repo
-> cmake -S . -B build
-> cmake --build build --target install
-```
+- If you're on Windows 🏁 you should execute the following commands **as administrator**:
+  ```
+  > cd \path\to\cloned_repo
+  > cmake -S . -B build
+  > cmake --build build --target INSTALL --config Release
+  ```
 
 You can also check the latest [release](https://github.com/nico-castell/bin-unbin/releases) for binaries in compressed archives, if you don't want to (or can't) compile the programs yourself.
 
