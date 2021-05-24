@@ -1,24 +1,50 @@
 #include <iostream>
+#include <vector>
+
+#include <table_maker.hpp>
+
 using std::string;
+
+uint8_t error_out(char* arg)
+{
+	std::cerr << "ERROR: Incorrect arguments\n"
+				 << "Usage: " << (string)arg << " (-t) XXXXXXXX XXXXXXXX...\n";
+	return 1;
+}
 
 int main(int argc, char* argv[])
 {
-	// Validate arguments
-	if (argc < 2)
-	{
-		std::cerr << "\033[01;31mERROR: You must input at least one argument\n"
-					 << "\033[00;33mUsage:\033[00m " << (string)argv[0] << " XXXXXXXX XXXXXXXX ...\n";
-		return 1;
-	}
+	if (argc == 1)
+		return error_out(argv[0]);
 
-	/**
-	 * Convert char* "binary" arguments to ASCII characters
-	 *   1. Convert char* to long (specify base 2), result is decimal long
-	 *   2. Cast decimal long to char
-	 *   3. Print the character
-	 */
-	for (int i = 1; i < argc; i++)
-		std::cout << (char)strtol(argv[i], NULL, 2);
+	// Declare a valid number of arguments, which changes with the "-t" flag
+	uint8_t valid_argc = 2;
+	bool flagged = ((string)argv[1] == "-t");
+	if (flagged)
+		valid_argc = 3;
+
+	// Validate arguments
+	if (argc <= valid_argc)
+		return error_out(argv[0]);
+
+	// input vector
+	std::vector<int> input;
+	int il = argc - valid_argc + 1;
+	input.resize(il);
+
+	for (int i = 0; i < il; i++)
+		input[i] = std::strtol(argv[i + (valid_argc - 1)], NULL, 2);
+
+	// If flagged...
+	if (flagged)
+	{
+		// ...call the table maker and exit...
+		table_maker(input);
+		return 0;
+	}
+	// ...else print the string
+	for (int i = 0; i < il; i++)
+		std::cout << (char)input[i];
 	std::cout << '\n';
 
 	return 0;

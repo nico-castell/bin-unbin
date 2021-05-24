@@ -1,21 +1,22 @@
 cmake_minimum_required(VERSION 3.16.0)
 
-# binme   - Project to convert text to binary
+set(VERS 1.1.0)
+
+# Add table_maker project
+set(LIB_1 table_maker)
+add_subdirectory("src/table_maker")
+
+# binme - Project to convert text to binary
 set(PROJ_1 binme)
-set(VERS 1.0.2)
 project("${PROJ_1}" VERSION "${VERS}")
 add_executable("${PROJ_1}" "src/binme.cpp")
-set_property(TARGET "${PROJ_1}" PROPERTY
-             CXX_STANDARD 17
-				 CXX_STANDARD_REQUIRED 11)
+target_link_libraries("${PROJ_1}" PUBLIC "${LIB_1}")
 
 # unbinme - Project to convert binary to text
 set(PROJ_2 unbinme)
 project("${PROJ_2}" VERSION "${VERS}")
 add_executable("${PROJ_2}" "src/unbinme.cpp")
-set_property(TARGET "${PROJ_2}" PROPERTY
-             CXX_STANDARD 17
-				 CXX_STANDARD_REQUIRED 11)
+target_link_libraries("${PROJ_2}" PUBLIC "${LIB_1}")
 
 # Install
 foreach(i "${PROJ_1}" "${PROJ_2}")
