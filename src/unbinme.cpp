@@ -5,6 +5,9 @@
 
 using std::string;
 
+///@brief Print message to std::cerr. Usage: "return error_out(argv[0])"
+///@param arg The char* that is argv[0];
+///@return uint8_t The exit code of the program.
 uint8_t error_out(char* arg)
 {
 	std::cerr << "ERROR: Incorrect arguments\n"
