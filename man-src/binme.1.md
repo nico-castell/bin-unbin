@@ -1,4 +1,4 @@
-% binme(1) 1.0.2
+% binme(1) 1.1.0
 % Nicolás Castellán
 % May 2021
 
@@ -20,13 +20,19 @@
 binme - Takes ASCII text and returns the binary of that text.
 
 # SYNOPSIS
-**binme** *"Phrase"*
+**binme** "Phrase"
+
+**binme** *-t* "Phrase"
 
 # DESCRIPTION
-**binme** loops through the characters in the string and prints the bitset of each character to the console, followed by a space.
+**binme** loops through the characters in the string and prints the bitset of each character to the console, followed by a space. It can also print a table containing the values in binary, hexadecimal, octal, decimal and the characters themselves.
+
+# OPTIONS
+**-t**
+: Changes output mode to produce a table.
 
 # EXAMPLES
-**binme "have a nice day""**
+**binme** "have a nice day"
 : Will return the binary of the phrase "have a nice day".
 
 # EXIT VALUES
@@ -34,7 +40,7 @@ binme - Takes ASCII text and returns the binary of that text.
 : Success
 
 **1**
-: Missing or excesive arguments.
+: Incorrect use of arguments
 
 # COPYRIGHT
 Copyright © Nicolás Castellán 2021. License MIT. This software is provided "AS IS", there's no warrany of any kind.

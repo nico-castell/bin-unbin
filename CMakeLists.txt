@@ -40,6 +40,7 @@ set(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_SOURCE_DIR}/assets/Package-Descripti
 # RPM (RHEL-based distros) - Use -DCMAKE_BINARY_RPM=ON flag to enable it
 set(CPACK_RPM_FILE_NAME "RPM-DEFAULT")
 set(CPACK_RPM_PACKAGE_LICENSE "MIT")
+set(CPACK_RPM_CHANGELOG_FILE "${CMAKE_SOURCE_DIR}/assets/rpm-CHANGELOG.txt")
 
 # DEB (Debian-based distros) - Use -DCMAKE_BINARY_DEB=ON flag to enable it
 set(CPACK_DEBIAN_FILE_NAME "DEB-DEFAULT")

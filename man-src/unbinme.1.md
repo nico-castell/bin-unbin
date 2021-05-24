@@ -1,4 +1,4 @@
-% unbinme(1) 1.0.2
+% unbinme(1) 1.1.0
 % Nicolás Castellán
 % May 2021
 
@@ -20,13 +20,19 @@
 unbinme - Takes input in binary and returns ASCII text
 
 # SYNOPSIS
-**unbinme** 01100110 01101001 01101110 01100100 00100000 01100001 00100000 01101000 01101111 01100010 01100010 01111001 00100000 01100110 01101111 01110010 00100000 01100111 01101111 01100100 00100111 01110011 00100000 01110011 01100001 01101011 01100101
+**unbinme** XXXXXXXX XXXXXXXX ...
+
+**unbinme** *-t* XXXXXXXX XXXXXXXX ...
 
 # DESCRIPTION
-**unbinme** takes each argument as a bitset, and transforms each bitset into ASCII characters and prints them to the console.
+**unbinme** takes each argument as a bitset, and transforms each bitset into ASCII characters and prints them to the console. It can also print a table containing the values in binary, hexadecimal, octal, decimal and the characters themselves.
+
+# OPTIONS
+**-t**
+: Changes output mode to produce a table
 
 # EXAMPLES
-**unbinme 01101000 01100001 01110110 01100101 00100000 01100001 00100000 01101110 01101001 01100011 01100101 00100000 01100100 01100001 01111001**
+**unbinme** 01101000 01100001 01110110 01100101 00100000 01100001 00100000 01101110 01101001 01100011 01100101 00100000 01100100 01100001 01111001
 : Will return the phrase "have a nice day"
 
 # EXIT VALUES
@@ -34,7 +40,7 @@ unbinme - Takes input in binary and returns ASCII text
 : Success
 
 **1**
-: Missing arguments
+: Incorrect use of arguments
 
 # COPYRIGHT
 Copyright © Nicolás Castellán 2021. License MIT. This software is provided "AS IS", there's no warranty of any kind.
