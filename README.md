@@ -2,7 +2,7 @@
   <br>
     <img src="assets/logo.png" width="322" height="220">
   <br><br>
-  <i>bin-unbin me</i>
+  <i>bin-unbin</i>
 </h1>
 <p align="center">A project to convert binaries to text, and text to binary</p>
 <!-- #region Shields -->
