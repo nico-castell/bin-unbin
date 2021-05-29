@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16.0)
 
-set(VERS 1.1.0)
+set(VERS 1.1.1)
 
 # Add table_maker project
 set(LIB_1 table_maker)
