@@ -3,12 +3,17 @@
 All significant changes to **bin-unbin** will be documented here.
 
 - [Released](#released)
+  - [Version 1.1.1 - *2021-05-29*](#version-111---2021-05-29)
   - [Version 1.1.0 - *2021-05-24*](#version-110---2021-05-24)
   - [Version 1.0.0 - *2021-05-23*](#version-100---2021-05-23)
 
 ## Released
+### Version [1.1.1](https://github.com/nico-castell/bin-unbin/releases/tag/1.1.1) - *2021-05-29*
+Minor patches from version 1.1.1
+- Fixed the error message in binme
+- Fixed missing icon in *Apps* menu after installing bin-unbin on Windows.
 
-### Version 1.1.0 - *2021-05-24*
+### Version [1.1.0](https://github.com/nico-castell/bin-unbin/releases/tag/1.1.0) - *2021-05-24*
 - Introduced *"-t"* flag for binme and unbinme that produces pretty output for the input given.
   - Example:
     ```
