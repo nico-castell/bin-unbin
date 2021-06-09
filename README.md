@@ -5,14 +5,13 @@
   <i>bin-unbin</i>
 </h1>
 <p align="center">A project to convert binaries to text, and text to binary</p>
-<!-- #region Shields -->
 <p align="center">
     <a href="https://github.com/nico-castell/bin-unbin/commits"><img alt="Commits since latest release" src="https://img.shields.io/github/commits-since/nico-castell/bin-unbin/latest?label=Commits%20since%20last%20release&color=informational&logo=git&logoColor=white&style=flat-square"></a>
     <a href="https://github.com/nico-castell/bin-unbin/releases"><img alt="Release" src="https://img.shields.io/github/v/release/nico-castell/bin-unbin?color=informational&label=Release&logo=GitHub&logoColor=white&style=flat-square"></a>
     <a href="LICENSE"><img alt="Licene" src="https://img.shields.io/github/license/nico-castell/bin-unbin?color=informational&label=License&logo=Open%20Source%20Initiative&logoColor=white&style=flat-square"></a>
     <a href="https://github.com/nico-castell/bin-unbin"><img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/nico-castell/bin-unbin?label=Lines%20of%20code&color=informational&logo=C%2B%2B&logoColor=white&style=flat-square"></a>
+    <a href="htps://gihtub.com/nico-castell/bin-unbin/actions/workflows/codeql-analyze.yml"><img alt="CodeQL" src="https://img.shields.io/github/workflow/status/nico-castell/bin-unbin/CodeQL?label=CodeQL&logo=GitHub%20Actions&logoColor=white&style=flat-square"></a>
 </p>
-<!-- #endregion -->
 
 ## Binme
 Usage:
