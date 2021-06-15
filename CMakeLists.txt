@@ -2,6 +2,13 @@ cmake_minimum_required(VERSION 3.16.0)
 
 set(VERS 1.1.1)
 
+# Raise more errors
+if(MSVC)
+	add_compile_options(/W4)
+else()
+	add_compile_options(-Wall -Wextra)
+endif()
+
 # Add table_maker project
 set(LIB_1 table_maker)
 add_subdirectory("src/table_maker")
