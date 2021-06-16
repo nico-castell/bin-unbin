@@ -2,13 +2,6 @@ cmake_minimum_required(VERSION 3.16.0)
 
 set(VERS 1.1.1)
 
-# Raise more errors
-if(MSVC)
-	add_compile_options(/W4)
-else()
-	add_compile_options(-Wall -Wextra)
-endif()
-
 # Add table_maker project
 set(LIB_1 table_maker)
 add_subdirectory("src/table_maker")
@@ -24,6 +17,13 @@ set(PROJ_2 unbinme)
 project("${PROJ_2}" VERSION "${VERS}")
 add_executable("${PROJ_2}" "src/unbinme.cpp")
 target_link_libraries("${PROJ_2}" PUBLIC "${LIB_1}")
+
+# Raise more errors
+if(MSVC)
+	add_definitions(/W4)
+else()
+	add_definitions(-Wall -Wextra)
+endif()
 
 # Install
 foreach(i "${PROJ_1}" "${PROJ_2}")
