@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
 	string input = argv[1];
 	if (flagged)
 		input = argv[2];
-	int il = input.length();
+	size_t il = input.length();
 
 	// If flagged...
 	if (flagged)
