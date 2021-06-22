@@ -20,19 +20,33 @@ target_link_libraries("${PROJ_2}" PUBLIC "${LIB_1}")
 
 # Raise more errors
 if(MSVC)
-	add_definitions(/W4)
+	foreach(proj "${PROJ_1}" "${PROJ_2}")
+		target_compile_options(
+			"${proj}" BEFORE
+			PUBLIC /W4
+		)
+	endforeach()
 else()
-	add_definitions(-Wall -Wextra)
+	foreach(proj "${PROJ_1}" "${PROJ_2}")
+		target_compile_options(
+			"${proj}" BEFORE
+			PUBLIC -Wall -Wextra
+		)
+	endforeach()
 endif()
 
 # Install
 foreach(i "${PROJ_1}" "${PROJ_2}")
-	install(TARGETS "${i}"
-	        RUNTIME
-	        DESTINATION bin)
+	install(
+		TARGETS "${i}"
+		RUNTIME
+		DESTINATION bin
+	)
 	if("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
-		install(FILES "man/${i}.1"
-				  DESTINATION share/man/man1)
+		install(
+			FILES "man/${i}.1"
+			DESTINATION share/man/man1
+		)
 	endif()
 endforeach()
 

@@ -43,14 +43,14 @@ int main(int argc, char* argv[])
 		// ...create an int vector and call table_maker, then exit
 		std::vector<int> _input;
 		_input.resize(il);
-		for (int i = 0; i < il; i++)
+		for (size_t i = 0; i < il; i++)
 			_input[i] = input[i];
 
 		table_maker(_input);
 		return 0;
 	}
 	// ...else print the bitsets
-	for (int i = 0; i < il; i++)
+	for (size_t i = 0; i < il; i++)
 		std::cout << (std::bitset<8>)input[i] << ' ';
 	std::cout << std::endl;
 
