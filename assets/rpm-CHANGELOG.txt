@@ -1,3 +1,6 @@
+* Tue Jun 22 2021 Nicolás Castellán - 1.1.2-1
+- Added compile options which led to warnings in the source code, this release fixes them.
+
 * Sat May 29 2021 Nicolás Castellán - 1.1.1-1
 - Fixed error message for binme command
 

@@ -2,10 +2,14 @@
 
 All significant changes to **bin-unbin** will be documented here.
 
+- [Unreleased](#unreleased)
 - [Released](#released)
   - [Version 1.1.1 - *2021-05-29*](#version-111---2021-05-29)
   - [Version 1.1.0 - *2021-05-24*](#version-110---2021-05-24)
   - [Version 1.0.0 - *2021-05-23*](#version-100---2021-05-23)
+
+## Unreleased
+Added compile options such as `-Wall -Wextra`, this led to some warnings in the source code. This release fixes those warnings.
 
 ## Released
 ### Version [1.1.1](https://github.com/nico-castell/bin-unbin/releases/tag/1.1.1) - *2021-05-29*
