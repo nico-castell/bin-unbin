@@ -58,12 +58,12 @@ set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Installs two commands, binme and unbinme,
 set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/nico-castell/bin-unbin")
 set(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_SOURCE_DIR}/assets/Package-Description.txt")
 
-# RPM (RHEL-based distros) - Use -DCMAKE_BINARY_RPM=ON flag to enable it
+# RPM (RHEL-based distros) - Use -DCPACK_BINARY_RPM=ON flag to enable it
 set(CPACK_RPM_FILE_NAME "RPM-DEFAULT")
 set(CPACK_RPM_PACKAGE_LICENSE "MIT")
 set(CPACK_RPM_CHANGELOG_FILE "${CMAKE_SOURCE_DIR}/assets/rpm-CHANGELOG.txt")
 
-# DEB (Debian-based distros) - Use -DCMAKE_BINARY_DEB=ON flag to enable it
+# DEB (Debian-based distros) - Use -DCPACK_BINARY_DEB=ON flag to enable it
 set(CPACK_DEBIAN_FILE_NAME "DEB-DEFAULT")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "$ENV{USER}")
 
