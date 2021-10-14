@@ -12,7 +12,7 @@ using std::string;
 uint8_t error_out(char* arg)
 {
 	std::cerr << "ERROR: Incorrect arguments\n"
-				 << "Usage: " << (string)arg << " (-t) 'Phrase'...\n";
+	          << "Usage: " << (string)arg << " (-t) 'Phrase'...\n";
 	return 1;
 }
 
