@@ -1,3 +1,6 @@
+* Mon Nov 15 2021 Nicolás Castellán - 1.1.3-1
+- Added author information in the manual page
+
 * Tue Jun 22 2021 Nicolás Castellán - 1.1.2-1
 - Added compile options which led to warnings in the source code, this release fixes them.
 

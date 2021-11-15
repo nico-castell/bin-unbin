@@ -1,5 +1,5 @@
-% binme(1) 1.1.2
-% Nicolás Castellán
+% binme(1) 1.1.3
+% Nicolás Castellán <cnicolas.developer@gmail.com>
 % May 2021
 
 <!-- Use:                                                             -->
