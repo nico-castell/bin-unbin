@@ -4,6 +4,16 @@
 
 #include <table_maker.hpp>
 
+#if _WIN32
+#include <io.h>
+#define ISATTY _isatty
+#define FILENO _fileno
+#else
+#include <unistd.h>
+#define ISATTY isatty
+#define FILENO fileno
+#endif
+
 using std::string;
 
 ///@brief Print message to std::cerr. Usage: "return error_out(argv[0])"
@@ -52,7 +62,8 @@ int main(int argc, char* argv[])
 	// ...else print the bitsets
 	for (size_t i = 0; i < il; i++)
 		std::cout << (std::bitset<8>)input[i] << ' ';
-	std::cout << std::endl;
+	if(ISATTY(FILENO(stdout)))
+		std::cout << '\n';
 
 	return 0;
 }

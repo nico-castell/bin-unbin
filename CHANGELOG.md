@@ -3,12 +3,17 @@
 All significant changes to **bin-unbin** will be documented here.
 
 - [Released](#released)
+  - [Version 1.1.4 - *2021-11-29*](#version-114---2021-11-29)
+  - [Version 1.1.3 - *2021-11-15*](#version-113---2021-11-15)
   - [Version 1.1.2 - *2021-06-22*](#version-112---2021-06-22)
   - [Version 1.1.1 - *2021-05-29*](#version-111---2021-05-29)
   - [Version 1.1.0 - *2021-05-24*](#version-110---2021-05-24)
   - [Version 1.0.0 - *2021-05-23*](#version-100---2021-05-23)
 
 ## Released
+### Version [1.1.4](https://github.com/nico-castell/bin-unbin/releases/tag/1.1.4) - *2021-11-29*
+Detect is stdout is not a terminal, if it's not, don't print the final newline character.
+
 ### Version [1.1.3](https://github.com/nico-castell/bin-unbin/releases/tag/1.1.3) - *2021-11-15*
 Added author information to the manpage and tweaked the source code formatting.
 
